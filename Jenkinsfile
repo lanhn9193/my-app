@@ -3,9 +3,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                script {
-                    sh 'git rev-parse --is-inside-work-tree'
-                }
+               git 'https://github.com/lanhn9193/my-app.git'
             }
         }
         stage('Clone Repo Github'){
