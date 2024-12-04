@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-               git 'https://github.com/lanhn9193/my-app.git'
+               git url: 'https://github.com/lanhn9193/my-app.git', branch: 'main'
             }
         }
         stage('Clone Repo Github'){
