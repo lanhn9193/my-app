@@ -1,6 +1,11 @@
 pipeline {
     agent any
     stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
         stage('Clone Repo Github'){
             steps{
                 echo 'Clone Repo Github'
