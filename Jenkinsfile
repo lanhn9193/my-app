@@ -3,7 +3,12 @@ pipeline {
     stages {
         stage('Checkout'){
             steps{
-                git 'https://github.com/lanhn9193/my-app.git'
+                // Kiểm tra thư mục hiện tại
+                sh 'pwd'
+                sh 'ls -la'
+
+                // Lệnh Git checkout (nếu sử dụng Git SCM)
+                checkout scm
             }
         }
         stage('Clone Repo Github'){
