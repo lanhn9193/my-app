@@ -3,7 +3,10 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/lanhn9193/my-app.git'
+                script {
+                    sh 'git status'
+                    sh 'git config remote.origin.url https://github.com/lanhn9193/my-app.git'
+                }
             }
         }
         stage('Clone Repo Github'){
