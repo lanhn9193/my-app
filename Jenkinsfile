@@ -1,13 +1,6 @@
 pipeline {
     agent any
     stages {
-        stage('Checkout') {
-            steps{
-                echo 'Clone Repo Github'
-                cleanWs()  // Dọn dẹp workspace
-                sh 'git clone https://github.com/lanhn9193/my-app.git'
-            }
-        }
         stage('Clone Repo Github'){
             steps{
                 echo 'Clone Repo Github'
