@@ -2,11 +2,10 @@ pipeline {
     agent any
     stages {
         stage('Checkout') {
-            steps {
-                script {
-                    sh 'git status'
-                    sh 'git config remote.origin.url https://github.com/lanhn9193/my-app.git'
-                }
+            steps{
+                echo 'Clone Repo Github'
+                cleanWs()  // Dọn dẹp workspace
+                sh 'git clone https://github.com/lanhn9193/my-app.git'
             }
         }
         stage('Clone Repo Github'){
