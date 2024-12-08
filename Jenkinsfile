@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('Checkout'){
+        stage('Checkout Develop'){
             steps{
                 // Kiểm tra thư mục hiện tại
                 sh 'pwd'
@@ -11,24 +11,24 @@ pipeline {
                 checkout scm
             }
         }
-        stage('Clone Repo Github'){
+        stage('Clone Repo Github Develop'){
             steps{
-                echo 'Clone Repo Github'
+                echo 'Clone Repo Github Develop'
             }
         }
-        stage('Build') {
+        stage('Build Develop') {
             steps {
-                echo 'Building...'
+                echo 'Building Develop...'
             }
         }
-        stage('Test') {
+        stage('Test Develop') {
             steps {
-                echo 'Testing...'
+                echo 'Testing Develop...'
             }
         }
-        stage('Deploy') {
+        stage('Deploy Develop') {
             steps {
-                echo 'Deploying...'
+                echo 'Deploying Develop...'
             }
         }
     }
